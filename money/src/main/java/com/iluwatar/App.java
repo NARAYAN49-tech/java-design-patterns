@@ -55,16 +55,16 @@ public class App {
 
     // Demonstrate addition
     try {
-      usdAmount1.addMoney(usdAmount2);
-      logger.log(Level.INFO, "Sum in USD: {0}", usdAmount1.getAmount());
+      usdAmount1.addMoney(usdAmount2); /* Adding usdAmount2 into usdAmount1 */
+      logger.log(Level.INFO, "Sum in USD: {0}$", usdAmount1.getAmount());
     } catch (CannotAddTwoCurrienciesException e) {
       logger.log(Level.SEVERE, "Error adding money: {0}", e.getMessage());
     }
 
     // Demonstrate subtraction
     try {
-      usdAmount1.subtractMoney(usdAmount2);
-      logger.log(Level.INFO, "Difference in USD: {0}", usdAmount1.getAmount());
+      usdAmount1.subtractMoney(usdAmount2); /* Subtracting usdAmount2 from usdAmount1 and the difference value stored in usdAmount1 */
+      logger.log(Level.INFO, "Difference in USD: {0}$", usdAmount1.getAmount());
     } catch (CannotSubtractException e) {
       logger.log(Level.SEVERE, "Error subtracting money: {0}", e.getMessage());
     }
@@ -72,9 +72,9 @@ public class App {
     // Demonstrate multiplication
     try {
       usdAmount1.multiply(2);
-      logger.log(Level.INFO, "Multiplied Amount in USD: {0}", usdAmount1.getAmount());
+      logger.log(Level.INFO, "Multiplied Amount in USD: {0}$", usdAmount1.getAmount());
     } catch (IllegalArgumentException e) {
-      logger.log(Level.SEVERE, "Error multiplying money: {0}", e.getMessage());
+      logger.log(Level.SEVERE, "Error multiplying money: {0}$", e.getMessage());
     }
 
     // Demonstrate currency conversion
